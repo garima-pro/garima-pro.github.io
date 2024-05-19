@@ -15,6 +15,8 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+
+
 :root {
 
   /**
@@ -25,49 +27,62 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    #3f3f40 3%, 
+    #303030 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    #2d2d2e40 0%, 
+    #1b1b1d00 100%
+  ), #202022;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    #ffda6b 0%, 
+    #ffc06100 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    #ffda6b40 0%, 
+    #ffbb5c00 59.86%
+  ), #202022;
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    #404040 0%, 
+    #40404000 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    #ffdb70, 
+    #ffbb5c
   );
+  --text-gradient-rainbow: linear-gradient(
+    to right, 
+    #ff9a9b, 
+    #fcce7a,
+    #fcf392, 
+    #d6ff9c,
+    #9abbff, 
+    #ab96ff,
+    #d59eff
+  );
+
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --jet: #383838;
+  --onyx: #2b2b2c;
+  --eerie-black-1: #202022;
+  --eerie-black-2: #1e1e1f;
+  --smoky-black: #121212;
+  --white-1: #ffffff;
+  --white-2: #fafafa;
+  --orange-yellow-crayola: #ffdb70;
+  --vegas-gold: #ceb15a;
+  --light-gray: #d6d6d6;
+  --light-gray-70: #d6d6d6b3;
+  --bittersweet-shimmer: #b84c4c;
+  --mint-green: #c2f8cb;
+  --violet: #8367c7;
 
   /**
    * typography
@@ -512,7 +527,7 @@ main {
  * #service 
  */
 
-.service { margin-bottom: 35px; }
+.service { margin-bottom: 35px;}
 
 .service-title { margin-bottom: 20px; }
 
@@ -522,10 +537,11 @@ main {
   gap: 20px;
 }
 
+
 .service-item {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 20px;
+  padding: 15px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
@@ -540,9 +556,9 @@ main {
   z-index: -1;
 }
 
-.service-icon-box { margin-bottom: 10px; }
+.service-icon-box { margin-bottom: 10px;}
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto;}
 
 .service-content-box { text-align: center; }
 
@@ -764,6 +780,17 @@ main {
   #RESUME
 \*-----------------------------------*/
 
+.container {
+  display: flex;
+  gap: 20px; /* space between the sections */
+  flex-wrap: wrap; /* ensures the sections wrap on smaller screens */
+}
+
+.skill, .timeline {
+  flex: 1; /* both sections take up equal space */
+  min-width: 300px; /* minimum width to maintain layout on small screens */
+}
+
 .article-title { margin-bottom: 30px; }
 
 
@@ -850,19 +877,19 @@ main {
 
 .skill .title-wrapper data {
   color: var(--light-gray);
-  font-size: var(--fs-7);
+  font-size: var(--fs-5);
   font-weight: var(--fw-300);
 }
 
 .skill-progress-bg {
   background: var(--jet);
   width: 100%;
-  height: 8px;
+  height: 3px;
   border-radius: 10px;
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-rainbow);
   height: 100%;
   border-radius: inherit;
 }
@@ -974,7 +1001,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before { background: #00000080; }
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1122,6 +1149,116 @@ main {
   #CONTACT
 \*-----------------------------------*/
 
+/**
+ * #contactsection 
+ */
+
+ .contactsection { margin-top: 35px;  margin-bottom: 35px; }
+
+ .contactsection-title { margin-bottom: 30px; }
+ 
+ .contactsection-list {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+ }
+ 
+ .contactsection-item {
+   position: relative;
+   background: var(--border-gradient-onyx);
+   padding: 20px;
+   border-radius: 14px;
+   box-shadow: var(--shadow-2);
+   margin-bottom: 10px;
+   z-index: 1;
+ }
+ 
+ .contactsection-item::before {
+   content: "";
+   position: absolute;
+   inset: 1px;
+   background: var(--bg-gradient-jet);
+   border-radius: inherit;
+   z-index: -1;
+ }
+ 
+ .contactsection-icon-box { margin-bottom: 10px; }
+ 
+ .contactsection-icon-box img { margin: auto; }
+ 
+ .contactsection-content-box { text-align: center; }
+ 
+ .contactsection-item-title { margin-bottom: 25px; }
+ 
+ .contactsection-item-text {
+   color: var(--light-gray);
+   font-size: var(--fs-6);
+   font-weight: var(--fw-3);
+   line-height: 1.6;
+ }
+
+ .contactsectioncontent-listemail {
+  display: grid;
+  grid-template-columns: 1fr;
+   gap: 3px;
+}
+
+.contactsectioncontent-listsocialmedia {
+  display: grid;
+  grid-template-columns: 1fr;
+   gap: 3px;
+}
+
+.contactsectioncontent-listresearch {
+  display: grid;
+  grid-template-columns: 1fr;
+   gap: 3px;
+}
+
+.resume-compliteracy-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+   gap: 3px;
+}
+
+.resume-languages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+   gap: 3px;
+}
+
+.contactsectioncontent-item {
+  min-width: 100%;
+  display: flex;
+  align-items: left;
+  gap: 10px;
+}
+
+.contactsectioncontent-info {
+  max-width: 100%;
+  width: 100%;
+}
+
+.contactsectioncontent-title {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  margin-bottom: 2px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+.contactsectioncontent-info :is(.contactsectioncontent-link, time, address) {
+  color: var(--white-2);
+  font-size: var(--fs-8);
+  margin-bottom: 20px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+.contactsectioncontent-info address { font-style: normal; }
+
+
+
 .mapbox {
   position: relative;
   height: 250px;
@@ -1220,7 +1357,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
-
 
 
 
