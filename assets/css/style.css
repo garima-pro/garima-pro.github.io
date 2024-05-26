@@ -961,7 +961,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -969,7 +969,7 @@ main {
 .project-item { display: none; }
 
 .project-item.active {
-  display: block;
+  display: grid;
   animation: scaleUp 0.25s ease forwards;
 }
 
@@ -1049,7 +1049,7 @@ main {
 
 .project-category {
   color: var(--light-gray-70);
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   font-weight: var(--fw-300);
 }
 
@@ -1136,7 +1136,7 @@ main {
 
 .blog-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-8);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -1880,7 +1880,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  .project-list { grid-template-columns: repeat(2, 1fr); }
 
 
 
