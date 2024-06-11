@@ -30,9 +30,9 @@
     #3f3f40 3%, 
     #303030 97%
   );
-  --bg-gradient-jet: linear-gradient(
+  --bg-gradient-jet: linear-gradient( /* What I'm Doing Card Colors */
     to bottom right, 
-    #2d2d2e40 0%, 
+    #fcff9c40 0%, 
     #1b1b1d00 100%
   ), #202022;
   --bg-gradient-yellow-1: linear-gradient(
@@ -50,7 +50,7 @@
     #404040 0%, 
     #40404000 50%
   );
-  --text-gradient-yellow: linear-gradient(
+  --text-gradient-yellow: linear-gradient( /* Lines */
     to right, 
     #ffdb70, 
     #ffbb5c
@@ -69,18 +69,18 @@
 
   /* solid */
 
-  --jet: #383838;
-  --onyx: #2b2b2c;
-  --eerie-black-1: #202022;
-  --eerie-black-2: #1e1e1f;
-  --smoky-black: #121212;
-  --white-1: #ffffff;
-  --white-2: #fafafa;
+  --jet: #dad9d9;   /* border */
+  --onyx: #fbc8c9; /* Role Tag */
+  --eerie-black-1: #202022; /* Skills Icon Background */
+  --eerie-black-2: #202022; /* Box Fill Background */
+  --smoky-black: #ab96ff; /* Background */
+  --white-1: #202022; /* Role Tag Font */
+  --white-2: #fa2323; /* Headings Font */
   --orange-yellow-crayola: #ffdb70;
   --vegas-gold: #ceb15a;
-  --light-gray: #d6d6d6;
-  --light-gray-70: #d6d6d6b3;
-  --bittersweet-shimmer: #b84c4c;
+  --light-gray: #43d3b2; /* Text Font */
+  --light-gray-70: #ff64e0b3; /* Hover Text Font */
+  --bittersweet-shimmer: #6dff85;
   --mint-green: #c2f8cb;
   --violet: #8367c7;
 
